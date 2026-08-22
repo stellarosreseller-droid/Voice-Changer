@@ -1,0 +1,15 @@
+{
+    "version": 5,
+    "label": "Voice Changer",
+    "package_name": "com.skipper.voicechangerapp",
+    "version_name": "1.02",
+    "version_code": 3,
+    "data_dirs": [],
+    "is_system": true,
+    "is_split_apk": false,
+    "split_configs": [],
+    "has_rules": false,
+    "apk_name": "Voice.apk",
+    "instruction_set": "arm64",
+    "key_store": false
+}

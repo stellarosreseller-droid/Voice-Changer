@@ -1,18 +1,17 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.stellaros.voicechanger'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.stellaros.voicechanger"
+        minSdk 24
+        targetSdk 34
+        versionCode 2
+        versionName "2.0"
     }
 }
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-task clean(type: Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }

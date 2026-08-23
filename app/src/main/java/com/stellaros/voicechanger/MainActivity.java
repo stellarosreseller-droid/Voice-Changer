@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
         main.addView(title);
 
         TextView subtitle = new TextView(this);
-        subtitle.setText("Senza Root - Funziona in vivavoce per tutte le app");
+        subtitle.setText("Senza Root - Vivavoce per tutte le app");
         subtitle.setTextColor(Color.GRAY);
         subtitle.setTextSize(12);
         subtitle.setGravity(Gravity.CENTER);
@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 
         btnRec.setOnClickListener(v -> {
             if(!isRecording){ startRec(); btnRec.setText("■ STOP REGISTRAZIONE"); isRecording=true; }
-            else { stopRec(); btnRec.setText("● REGISTRA VOCALE"); isRecording=false; Toast.makeText(this,"Salvato! Ora premi PLAY con effetto",0).show(); }
+            else { stopRec(); btnRec.setText("● REGISTRA VOCALE"); isRecording=false; Toast.makeText(this,"Salvato!",0).show(); }
         });
         btnPlay.setOnClickListener(v -> playVoice(currentPitch));
     }
@@ -124,5 +124,5 @@ public class MainActivity extends Activity {
     }
     void startRec(){ mediaRecorder=new MediaRecorder(); mediaRecorder.setAudioSource(1); mediaRecorder.setOutputFormat(2); mediaRecorder.setOutputFile(filePath); mediaRecorder.setAudioEncoder(3); try{mediaRecorder.prepare();mediaRecorder.start();}catch(Exception e){} }
     void stopRec(){ try{mediaRecorder.stop();mediaRecorder.release();}catch(Exception e){} mediaRecorder=null; }
-    void playVoice(float pitch){ try{ if(player!=null) player.release(); player=new MediaPlayer(); player.setDataSource(filePath); player.prepare(); PlaybackParams p=new PlaybackParams(); p.setPitch(pitch); player.setPlaybackParams(p); player.start(); }catch(Exception e){ Toast.makeText(this,"Registra prima un vocale!",0).show(); } }
+    void playVoice(float pitch){ try{ if(player!=null) player.release(); player=new MediaPlayer(); player.setDataSource(filePath); player.prepare(); PlaybackParams p=new PlaybackParams(); p.setPitch(pitch); player.setPlaybackParams(p); player.start(); }catch(Exception e){ Toast.makeText(this,"Registra prima!",0).show(); } }
 }

@@ -1,6 +1,16 @@
 plugins {
-    id 'com.android.application' version '8.2.2' apply false
+    id 'com.android.application'
 }
-task clean(type: Delete) {
-    delete rootProject.buildDir
+android {
+    namespace 'com.stellaros.voicechanger'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.stellaros.voicechanger"
+        minSdk 24
+        targetSdk 34
+        versionCode 4
+        versionName "4.0"
+    }
+}
+dependencies {
 }

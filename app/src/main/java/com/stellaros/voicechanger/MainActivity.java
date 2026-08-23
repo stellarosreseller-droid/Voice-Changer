@@ -7,8 +7,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TextView tv = new TextView(this);
-        tv.setText("Voice Changer - Build OK!");
         tv.setTextSize(24);
+        tv.setText("BUILD OK - Voice Changer v4");
         setContentView(tv);
     }
 }
